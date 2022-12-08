@@ -331,12 +331,12 @@ const handleGetProductById = (id) => {
                         as: 'colorData',
                         plain: true,
                     },
-                    // {
-                    //     model: db.DetailPhotos,
-                    //     attributes: ['image'],
-                    //     as: 'photoDetail',
-                    //     plain: true
-                    // }
+                    {
+                        model: db.DetailPhotos,
+                        attributes: ['image'],
+                        as: 'photoDetail',
+                        plain: true
+                    }
                 ]
             });
             console.log('product :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ', product);
