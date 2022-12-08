@@ -339,7 +339,6 @@ const handleGetProductById = (id) => {
                     }
                 ]
             });
-            console.log('product :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ', product);
             if (product && product.image) {
                 product.image = Buffer.from(product.image, 'base64').toString('binary');
             }
