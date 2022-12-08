@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border:1px solid black;
+          border-collapse: collapse;
+        }
+        </style>
+</head>
+<body>
+    <table style="width:70%">
+        <tr>
+          <th>Email</th>
+          <th>first name</th>
+          <th>lastName</th>
+          <th>address</th>
+          <th>action</th>
+        </tr>
+        <% dataUser.forEach(user => { %>
+            <tr>
+                <td><%= user.email %> </td>
+                <td><%= user.firstName %> </td>
+                <td><%= user.lastName %> </td>
+                <td><%= user.address %> </td>
+                <td>
+                    <button>
+                        <a href="/edit-crud?id=<%= user.id %>">edit</a>
+                    </button>
+                    <button>
+                        <a href="/delete-crud?id=<%= user.id %>">delete</a>
+                    </button>
+                </td>
+              </tr>
+        <% }) %>
+        
+       
+      </table>
+</body>
+</html>
