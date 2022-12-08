@@ -28,7 +28,7 @@ const initWebRoutes = (app) => {
 
     //Product API======================================================
     router.post("/api/create-product", middleWareController.verifyTokenAndAdmin, productController.handleCreateProduct);
-    router.get("/api/get-product-by-id", middleWareController.verifyToken, productController.handleGetProductById);
+    router.get("/api/get-product-by-id", productController.handleGetProductById);
     router.get("/api/get-all-product", middleWareController.verifyTokenAndAdmin, productController.handleGetAllProduct);
     router.get("/api/get-all-product-home", productController.handleGetAllProductHome);
     router.post("/api/createOder", middleWareController.verifyTokenAndAdmin, productController.createOder);
